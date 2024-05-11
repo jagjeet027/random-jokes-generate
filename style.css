@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.7055614482120973) 54%, rgba(0, 212, 255, 1) 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #0f0808;
+    text-decoration: underline #0400ff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    padding: 20px;
+    box-shadow: 5px 5px 7px #1811f5;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: boxAnimation 1s ease-in-out;
+}
+
+@keyframes boxAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#joke-container {
+    width: 50%;
+    text-align: center;
+}
+
+#joke-setup {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+    animation: textAnimation 1s ease-in-out;
+}
+
+@keyframes textAnimation {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#joke-punchline {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: punchlineAnimation 1s ease-in-out;
+}
+
+@keyframes punchlineAnimation {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+button {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-color: #1512c8;
+    color: whitesmoke;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 2px 5px red;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, red, blue);
+    animation: buttonAnimation 0.5s infinite alternate;
+    font-size: 15px;
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.img {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: imageAnimation 1s ease-in-out;
+}
+
+@keyframes imageAnimation {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
